@@ -7,13 +7,14 @@ import Favorites from './Favorites'
 import Gallery from './Gallery'
 import Guestbook from './Guestbook'
 import Movies from './Movies'
+import Graph from './Graph'
 
 export default class App extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            'page': 'Home', // change me for easier debug
+            'page': 'Graph', // change me for easier debug
             'overlay': 'hidden',
             'gototop': 'hidden',
             'overlayImg': require('./imgs/owls/img.gif'),
@@ -52,7 +53,8 @@ export default class App extends Component {
         Favorites: <Favorites onOverlayClick={this.showOverlay}/>,
         Gallery: <Gallery onOverlayClick={this.showOverlay}/>,
         Guestbook: <Guestbook/>,
-        Movies: <Movies/>
+        Movies: <Movies/>,
+        Graph: <Graph/>,
     };
 
     onTabChange = function (tabName) {
@@ -77,7 +79,7 @@ export default class App extends Component {
                             <p className="caption">Coder. Artist. Owl lover.</p>
                         </div>
 
-                        <TabList onTabChange={this.onTabChange}/>
+                        <TabList tabs={Object.keys(this.tabPages)} onTabChange={this.onTabChange}/>
                         
                         <div className="whitespace"></div>
                         

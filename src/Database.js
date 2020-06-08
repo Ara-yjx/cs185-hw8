@@ -14,10 +14,10 @@ function init() {
 init();
 
 
-function onValue(callback) {
-    let ref = firebase.database().ref('guestbook')
-    ref.on('value', callback)
-}
+// function onValue(callback) {
+//     let ref = firebase.database().ref('guestbook')
+//     ref.on('value', callback)
+// }
 
 
 
