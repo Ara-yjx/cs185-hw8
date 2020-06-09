@@ -14,7 +14,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            'page': 'Graph', // change me for easier debug
+            'page': 'Home', // change me for easier debug
             'overlay': 'hidden',
             'gototop': 'hidden',
             'overlayImg': require('./imgs/owls/img.gif'),
