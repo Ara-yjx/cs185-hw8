@@ -100,6 +100,7 @@ export default class Movies extends Component {
             imdbRating: movieData.imdbRating,
             Genre: movieData.Genre,
             Poster: movieData.Poster,
+            // Actors: movieData.Actors,
         }
         let moviesState = this.state.movies;
         moviesState['All'][filteredData.imdbID] = filteredData;
